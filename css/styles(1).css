@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*---- BODY---- */
+
+#grid-principal {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-areas: "header"
+                       "main"
+                       "footer";
+}
+
+/*---- HEADER---- */
+
+#header {
+  background-color: #E0D68A;
+  grid-area: header;
+  position: sticky;
+  top: 0%;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+/*----logo---- */
+
+.logo {
+  height: 70px;
+  width: 70px;
+  margin-left: .5em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+/*----Nav ----*/
+  
+nav ul li {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  list-style: none;
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #511730;
+  font-family: 'Pacifico', cursive;
+}
+
+/*---- MAIN---- */
+
+#main {
+  background-color: #CB9173;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 400px 900px 200px;
+  grid-template-areas: "section1"
+                       "section2"
+                       "section3";
+}
+
+/*-- ---- Banner ---- --*/
+
+#section1{
+  background-image: url(../images/banner.png);
+  background-size: cover;
+  grid-area: section1;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  align-content: center;
+  justify-items: center;
+} 
+
+#text-banner {
+position: absolute;
+color: #000000b7;
+font-size: 3em;
+font-family: 'Pacifico', cursive;
+}
+
+/*---- Contenido---- */
+
+#section2{
+  background-color: #D1A379;
+  grid-area: section2;
+  display: grid;
+  grid-template-rows: .5fr 1fr 1fr .5fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "titulo titulo titulo titulo"
+                       "article1 article2 article3 article4"
+                       "article5 article6 article7 article8"
+                       "button button button button";
+  grid-column-gap: 5px;      
+  grid-row-gap: 5px; 
+}
+
+.titulo{
+  grid-area: titulo;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  margin: auto;
+}
+
+section article {
+  background-color: #ffff99;
+  border-radius: 20px;
+  border: 5px solid white;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#article1 {
+  grid-area: article1;
+}
+
+#article2 {
+  grid-area: article2;
+}
+
+#article3 {
+  grid-area: article3;
+}
+
+#article4 {
+  grid-area: article4;
+}
+
+#article5 {
+  grid-area: article5;
+}
+
+#article6 {
+  grid-area: article6;
+}
+
+#article7 {
+  grid-area: article7;
+}
+
+#article8 {
+  grid-area: article8;
+}
+
+.button {
+  width: 140px;
+  height: 41px;
+  border-radius: 20px;
+  margin-top: 2rem;
+  background-color: #f59275;
+  grid-area: button;
+  justify-self: center;
+}
+
+/*---- Parrafo---- */
+
+#section3 {
+  background-color: #42112C;
+  grid-area: section3;
+  display: flex;
+  align-items: center;
+}
+
+.parrafo {
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+/*---- FOOTER---- */
+
+#footer {
+  background-color: #8E443D;
+  grid-area: footer;
+}
+
+footer div img {
+  height: 40px;
+  width: 40px;
+}
+
+.contact {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-family: 'Pacifico', cursive;
+}
+
+/*-- ----  HTML Contacto ---- --*/
+
+#body-contacto {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-areas: "header"
+                       "main-contacto"
+                       "footer";
+}
+
+
+.main-contacto {
+  background-color: #CB9173;
+  grid-area: main-contacto;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "c-titulo c-titulo c-titulo"
+                       "contacto1 contacto2 contacto3";  
+}
+
+.contacto-titulo {
+  grid-area: c-titulo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Pacifico', cursive;
+
+}
+
+.contacto-section1 {
+  grid-area: contacto1;
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-contact {
+  height: 200px;
+  width: 400px;
+}
+
+/* Titulo y subtitulo */
+
+.contacto-section2 {
+  grid-area: contacto2;
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-contact {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+}
+
+/* Frmulario */
+
+.form {
+  text-align: center;
+}
+
+.form div {
+  margin-top: 5px;
+}
+
+.contacto-section3 {
+  grid-area: contacto3;
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+ 
+}
+
+@media only screen and (max-width: 500px) {
+  
+}
+  
+
+
+
+
+
+

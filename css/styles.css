@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: roboto, sans-serif;
+  background-color: #fffec8;
+}
+
+/*-- ---- Estilo del Header ---- --*/
+
+header {
+  background-color: #eedd99;
+  width: 100%;
+  position: sticky;
+  top: 0%;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*-- ---- logo del Header ---- --*/
+
+.logo {
+  height: 70px;
+  width: 70px;
+  margin-left: .5em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+/*-- ---- Nav del Header ---- --*/
+  
+nav ul li {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  list-style: none;
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #4f2d4b;
+  font-family: 'Pacifico', cursive;
+}
+
+/* Titulo */
+
+.title {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+}
+
+/*-- ---- Main ---- --*/
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh 1fr 600pxfr;
+  grid-template-areas: "banner"
+                       "section2"
+                       "section3";
+}
+
+/*-- ---- Banner ---- --*/
+
+.banner{
+  background-image: url(../images/banner.png);
+  background-size: cover;
+  padding-top: 70px;
+  min-height: 300px;
+  grid-area: banner;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.text-banner {
+position: absolute;
+left: 35%;
+right: 35%;
+color: #39393A;
+font-size: 3em;
+font-family: 'Pacifico', cursive;
+}
+
+/*-- ---- Section 2 ---- --*/
+
+.section2 {
+  grid-area: section2;
+}
+
+.section2-grid {
+  display: grid;
+  grid-template-rows: .5fr 1fr 1fr .5fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "titulo titulo titulo titulo"
+                       "article1 article2 article3 article4"
+                       "article5 article6 article7 article8"
+                       "button button button button";
+  grid-column-gap: 5px;      
+  grid-row-gap: 5px;               
+}
+
+.titulo{
+  grid-area: titulo;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  margin: auto;
+}
+
+.article1 {
+  grid-area: article1;
+}
+
+.article2 {
+  grid-area: article2;
+}
+
+.article3 {
+  grid-area: article3;
+}
+
+.article4 {
+  grid-area: article4;
+}
+
+.article5 {
+  grid-area: article5;
+}
+
+.article6 {
+  grid-area: article6;
+}
+
+.article7 {
+  grid-area: article7;
+}
+
+.article8 {
+  grid-area: article8;
+}
+
+.button {
+  width: 140px;
+  height: 41px;
+  border-radius: 20px;
+  margin-top: 2rem;
+  background-color: #f59275;
+  grid-area: button;
+  justify-self: center;
+}
+
+ /* Fondo y borde del article */
+
+.article {
+  background-color: #ffff99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid white;
+  border-radius: 20px;
+}
+
+ /* -- ---- Section 3 ---- --*/
+
+ .section3 {
+  grid-area: section3;
+ }
+
+/* Parrafo del Div*/
+
+.parrafo {
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+/* Estilo del Footer */
+
+footer {
+  background-color: #eedd99;
+}
+
+/* Tamaño de RRSS */
+
+footer div img {
+  height: 40px;
+  width: 40px;
+}
+
+.contact {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-family: 'Pacifico', cursive;
+}
+
+/*-- ----  HTML Contacto ---- --*/
+
+.contacto-grid {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "c-titulo c-titulo c-titulo"
+                       "contacto1 contacto2 contacto3";  
+}
+
+.contacto-titulo {
+  grid-area: c-titulo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Pacifico', cursive;
+
+}
+
+.contacto-section1 {
+  grid-area: contacto1;
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-contact {
+  height: 200px;
+  width: 400px;
+}
+
+/* Titulo y subtitulo */
+
+.contacto-section2 {
+  grid-area: contacto2;
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-contact {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+}
+
+/* Frmulario */
+
+.form {
+  text-align: center;
+}
+
+.form div {
+  margin-top: 5px;
+}
+
+.contacto-section3 {
+  grid-area: contacto3;
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+ 
+}
+
+@media only screen and (max-width: 500px) {
+  
+}
+
+
+
